@@ -2,6 +2,11 @@
 
 ## 📌 Overview
 This project is an AI-powered e-learning platform developed using Flask. It provides interactive tutorials, coding practice, and an AI assistant for real-time doubt solving.
+# AI Enhanced Learning Platform
+
+🔗 Live Demo: https://ai-learning-platform-jy6z.onrender.com
+
+An AI-powered e-learning platform built using Flask and OpenRouter API.
 
 ## 🚀 Features
 - HTML, CSS, JavaScript tutorials
