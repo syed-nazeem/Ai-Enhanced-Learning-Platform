@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Code Editor</title>
+
+    <!-- Monaco Editor (VS Code engine) -->
+    <script src="https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs/loader.js"></script>
+
+    <style>
+        body {
+            margin: 0;
+            background: #1e1e1e;
+            color: white;
+            font-family: Arial;
+        }
+        
+        /* TOPBAR */
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background: #111;
+        }
+        
+        /* TABS */
+        .tabs button {
+            margin-right: 10px;
+            padding: 8px 15px;
+            border: none;
+            cursor: pointer;
+            background: #333;
+            color: white;
+        }
+        
+        .tabs button.active {
+            background: #22c55e;
+        }
+        
+        /* MAIN SPLIT */
+        .main {
+            display: flex;
+            height: calc(100vh - 120px);
+        }
+        
+        /* LEFT EDITOR */
+        #editor {
+            width: 50%;
+            height: 100%;
+        }
+        
+        /* RIGHT OUTPUT */
+        iframe {
+            width: 50%;
+            height: 100%;
+            border: none;
+            background: white;
+        }
+        
+        /* ACTIONS */
+        .actions {
+            padding: 10px;
+        }
+        
+        /* BUTTON */
+        button {
+            padding: 8px 15px;
+            margin-right: 10px;
+            border: none;
+            cursor: pointer;
+            background: #22c55e;
+            color: white;
+        }
+        
+        /* AI BOX */
+        .ai-box {
+            display: flex;
+            padding: 10px;
+            background: #111;
+        }
+        
+        .ai-box input {
+            flex: 1;
+            padding: 10px;
+        }
+        </style>
+</head>
+
+<body>
+
+<div class="topbar">
+    <div class="tabs">
+        <button onclick="switchTab('html')" class="active">HTML</button>
+        <button onclick="switchTab('css')">CSS</button>
+        <button onclick="switchTab('js')">JS</button>
+    </div>
+
+    <div>
+        <button onclick="runCode()">Run ▶</button>
+        <button onclick="saveCode()">Save 💾</button>
+    </div>
+</div>
+
+<div class="main">
+    <div id="editor"></div>
+    <iframe id="output"></iframe>
+</div>
+
+<!-- AI assistant -->
+<div class="ai-box">
+    <input type="text" id="aiInput" placeholder="Ask AI for code...">
+    <button onclick="askAI()">Ask</button>
+</div>
+
+<script>
+let editor;
+let currentTab = "html";
+
+let codeData = {
+    html: "<h1>Hello</h1>",
+    css: "body { font-family: Arial; }",
+    js: "console.log('Hello');"
+};
+
+// Monaco setup
+require.config({ paths: { vs: 'https://cdn.jsdelivr.net/npm/monaco-editor@0.45.0/min/vs' }});
+
+require(["vs/editor/editor.main"], function () {
+
+    editor = monaco.editor.create(document.getElementById("editor"), {
+        value: codeData.html,
+        language: "html",
+        theme: "vs-dark",
+        automaticLayout: true
+    });
+
+    // AUTO RUN
+    editor.onDidChangeModelContent(() => {
+        codeData[currentTab] = editor.getValue();
+        runCode();
+    });
+
+});
+
+// SWITCH TAB
+function switchTab(tab) {
+    currentTab = tab;
+
+    editor.setValue(codeData[tab]);
+
+    let lang = tab === "js" ? "javascript" : tab;
+    monaco.editor.setModelLanguage(editor.getModel(), lang);
+
+    document.querySelectorAll(".tabs button").forEach(btn => btn.classList.remove("active"));
+    event.target.classList.add("active");
+}
+
+// RUN CODE
+function runCode() {
+    let output = document.getElementById("output");
+
+    let fullCode = `
+        <html>
+        <style>${codeData.css}</style>
+        <body>
+        ${codeData.html}
+        <script>${codeData.js}<\/script>
+        </body>
+        </html>
+    `;
+
+    output.srcdoc = fullCode;
+}
+
+// SAVE CODE (LOCAL STORAGE)
+function saveCode() {
+    localStorage.setItem("myProject", JSON.stringify(codeData));
+    alert("Saved!");
+}
+
+// LOAD SAVED
+window.onload = () => {
+    let saved = localStorage.getItem("myProject");
+    if (saved) {
+        codeData = JSON.parse(saved);
+    }
+};
+
+// AI ASSISTANT
+async function askAI() {
+
+    let question = document.getElementById("aiInput").value;
+
+    const res = await fetch("/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: question })
+    });
+
+    const data = await res.json();
+
+    // insert AI code into editor
+    editor.setValue(data.reply);
+}
+
+</script>
+
+</body>
+</html>

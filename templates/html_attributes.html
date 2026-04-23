@@ -1,0 +1,192 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>HTML Attributes</h1>
+
+<div class="top-nav">
+    <a class="btn" href="/html-elements">❮ Previous</a>
+    <a class="btn right" href="/html-headings">Next ❯</a>
+</div>
+
+<p class="desc">HTML attributes provide additional information about HTML elements.</p>
+
+<hr>
+
+<h2>HTML Attributes</h2>
+
+<ul>
+    <li>All HTML elements can have attributes</li>
+    <li>Attributes provide additional information</li>
+    <li>Attributes are always specified in the start tag</li>
+    <li>Attributes usually come in name/value pairs like: name="value"</li>
+</ul>
+
+<hr>
+
+<h2>The href Attribute</h2>
+
+<p>The &lt;a&gt; tag defines a hyperlink. The href attribute specifies the URL.</p>
+
+<div class="code-box">
+<pre>
+&lt;a href="https://www.w3schools.com"&gt;Visit W3Schools&lt;/a&gt;
+</pre>
+<button>Try it Yourself »</button>
+</div>
+
+<hr>
+
+<h2>The src Attribute</h2>
+
+<p>The &lt;img&gt; tag is used to embed an image. The src attribute specifies the path.</p>
+
+<div class="code-box">
+<pre>
+&lt;img src="img_girl.jpg"&gt;
+</pre>
+<button>Try it Yourself »</button>
+</div>
+
+<hr>
+
+<h2>The width and height Attributes</h2>
+
+<p>The &lt;img&gt; tag should also contain width and height attributes.</p>
+
+<div class="code-box">
+<pre>
+&lt;img src="img_girl.jpg" width="500" height="600"&gt;
+</pre>
+<button>Try it Yourself »</button>
+</div>
+
+<hr>
+
+<h2>The alt Attribute</h2>
+
+<p>The alt attribute provides alternative text for an image.</p>
+
+<div class="code-box">
+<pre>
+&lt;img src="img_girl.jpg" alt="Girl with a jacket"&gt;
+</pre>
+<button>Try it Yourself »</button>
+</div>
+
+<hr>
+
+<h2>The style Attribute</h2>
+
+<p>The style attribute is used to add styles to an element.</p>
+
+<div class="code-box">
+<pre>
+&lt;p style="color:red;"&gt;This is a red paragraph.&lt;/p&gt;
+</pre>
+<button>Try it Yourself »</button>
+</div>
+
+<hr>
+
+<h2>The lang Attribute</h2>
+
+<p>The lang attribute declares the language of the Web page.</p>
+
+<div class="code-box">
+<pre>
+&lt;html lang="en"&gt;
+</pre>
+</div>
+
+<hr>
+
+<h2>The title Attribute</h2>
+
+<p>The title attribute defines extra information about an element.</p>
+
+<div class="code-box">
+<pre>
+&lt;p title="I'm a tooltip"&gt;This is a paragraph.&lt;/p&gt;
+</pre>
+<button>Try it Yourself »</button>
+</div>
+
+<hr>
+
+<h2>We Suggest: Always Use Lowercase Attributes</h2>
+
+<div class="note">
+<p>HTML is not case sensitive, but lowercase is recommended.</p>
+</div>
+
+<hr>
+
+<h2>We Suggest: Always Quote Attribute Values</h2>
+
+<div class="code-box">
+<pre>
+&lt;a href="https://www.w3schools.com"&gt;Link&lt;/a&gt;
+</pre>
+</div>
+
+<hr>
+
+<h2>Single or Double Quotes?</h2>
+
+<p>Double quotes are most common, but single quotes can also be used.</p>
+
+<div class="code-box">
+<pre>
+&lt;p title='John "ShotGun" Nelson'&gt;
+</pre>
+<button>Try it Yourself »</button>
+</div>
+
+<hr>
+
+<h2>Chapter Summary</h2>
+
+<ul>
+    <li>All HTML elements can have attributes</li>
+    <li>Attributes provide additional information</li>
+    <li>Always use lowercase attributes</li>
+    <li>Always quote attribute values</li>
+</ul>
+
+<hr>
+
+<div class="exercise">
+    <h3>Exercise</h3>
+    <p>What is the correct HTML attribute for a link?</p>
+
+    <button>href</button>
+    <button>src</button>
+    <button>link</button>
+
+    <br><br>
+    <button class="submit">Submit Answer</button>
+</div>
+
+<hr>
+
+<h2>HTML Attribute Reference</h2>
+
+<div class="note">
+<p>For a complete list of attributes, refer to HTML Attribute Reference.</p>
+</div>
+
+<div class="video">
+    <h3>Video: HTML Attributes</h3>
+    <iframe width="100%" height="300"
+        src="https://www.youtube.com/embed/qz0aGYrrlhU"
+        frameborder="0" allowfullscreen>
+    </iframe>
+</div>
+
+<div class="top-nav">
+    <a class="btn" href="/html-elements">❮ Previous</a>
+    <a class="btn right" href="/html-headings">Next ❯</a>
+</div>
+
+{% endblock %}

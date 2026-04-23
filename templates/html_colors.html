@@ -1,0 +1,155 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>HTML Colors</h1>
+
+<div class="top-nav">
+    <a class="btn" href="/html-comments">❮ Previous</a>
+    <a class="btn right" href="/html-css">Next ❯</a>
+</div>
+
+<p class="desc">HTML colors are specified with predefined color names, or with RGB, HEX, HSL, RGBA, or HSLA values.</p>
+
+<hr>
+
+<h2>Color Names</h2>
+
+<p>In HTML, a color can be specified using a color name:</p>
+
+<div class="color-grid">
+    <div style="background:red;">Red</div>
+    <div style="background:orange;">Orange</div>
+    <div style="background:dodgerblue;">DodgerBlue</div>
+    <div style="background:mediumseagreen;">Green</div>
+    <div style="background:gray;">Gray</div>
+    <div style="background:slateblue;">SlateBlue</div>
+    <div style="background:violet;">Violet</div>
+    <div style="background:lightgray;">LightGray</div>
+</div>
+
+<hr>
+
+<h2>Background Color</h2>
+
+<p>You can set the background color for HTML elements:</p>
+
+<div style="background-color:dodgerblue; color:white; padding:10px;">
+    Hello World
+</div>
+
+<div style="background-color:tomato; color:white; padding:10px; margin-top:10px;">
+    Lorem ipsum text example
+</div>
+
+<div class="code-box">
+<pre>
+&lt;h1 style="background-color:DodgerBlue;"&gt;Hello World&lt;/h1&gt;
+&lt;p style="background-color:Tomato;"&gt;Text&lt;/p&gt;
+</pre>
+<button>Try it Yourself »</button>
+</div>
+
+<hr>
+
+<h2>Text Color</h2>
+
+<p>You can set the color of text:</p>
+
+<p style="color:tomato;">Hello World</p>
+
+<div class="code-box">
+<pre>
+&lt;h1 style="color:Tomato;"&gt;Hello World&lt;/h1&gt;
+&lt;p style="color:DodgerBlue;"&gt;Text&lt;/p&gt;
+</pre>
+<button>Try it Yourself »</button>
+</div>
+
+<hr>
+
+<h2>Border Color</h2>
+
+<p>You can set the color of borders:</p>
+
+<p style="border:2px solid tomato; padding:5px;">Hello World</p>
+<p style="border:2px solid dodgerblue; padding:5px;">Hello World</p>
+<p style="border:2px solid violet; padding:5px;">Hello World</p>
+
+<div class="code-box">
+<pre>
+&lt;h1 style="border:2px solid Tomato;"&gt;Hello World&lt;/h1&gt;
+</pre>
+<button>Try it Yourself »</button>
+</div>
+
+<hr>
+
+<h2>Color Values</h2>
+
+<p>Colors can also be specified using different formats:</p>
+
+<div class="color-box" style="background:rgb(255, 99, 71);">rgb(255, 99, 71)</div>
+<div class="color-box" style="background:#ff6347;">#ff6347</div>
+<div class="color-box" style="background:hsl(9, 100%, 64%);">hsl(9, 100%, 64%)</div>
+
+<div class="color-box" style="background:rgba(255, 99, 71, 0.5);">rgba(255,99,71,0.5)</div>
+<div class="color-box" style="background:hsla(9, 100%, 64%, 0.5);">hsla(9,100%,64%,0.5)</div>
+
+<div class="code-box">
+<pre>
+&lt;h1 style="background-color:rgb(255,99,71);"&gt;...&lt;/h1&gt;
+&lt;h1 style="background-color:#ff6347;"&gt;...&lt;/h1&gt;
+&lt;h1 style="background-color:hsl(9,100%,64%);"&gt;...&lt;/h1&gt;
+</pre>
+<button>Try it Yourself »</button>
+</div>
+
+<hr>
+
+<h2>Extra Tips</h2>
+
+<ul>
+    <li>✔ Use HEX for consistent colors</li>
+    <li>✔ Use RGBA for transparency</li>
+    <li>✔ Use HSL for easier adjustments</li>
+    <li>✔ Avoid too many bright colors</li>
+</ul>
+
+<hr>
+
+<h2>Exercise</h2>
+
+<div class="exercise">
+<p>Which color value represents red?</p>
+
+<button>rgb(255,0,0)</button>
+<button>rgb(0,255,0)</button>
+<button>rgb(0,0,255)</button>
+
+<br><br>
+<button class="submit">Submit Answer</button>
+</div>
+
+<hr>
+
+<div class="note">
+<p><b>Note:</b> You can explore more colors using online color pickers.</p>
+</div>
+
+<hr>
+
+<div class="video">
+    <h3>Video: HTML Colors</h3>
+    <iframe width="100%" height="300"
+        src="https://www.youtube.com/embed/qz0aGYrrlhU"
+        frameborder="0" allowfullscreen>
+    </iframe>
+</div>
+
+<div class="top-nav">
+    <a class="btn" href="/html-comments">❮ Previous</a>
+    <a class="btn right" href="/html-css">Next ❯</a>
+</div>
+
+{% endblock %}

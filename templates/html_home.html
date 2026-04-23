@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>HTML Tutorial</h1>
+
+<div class="card">
+    <h2>Learn HTML</h2>
+    <p>HTML is the standard markup language for Web pages.</p>
+    <button>Start Learning</button>
+</div>
+
+<div class="card">
+    <h2>HTML Reference</h2>
+    <p>Find all HTML tags and attributes.</p>
+    <button>View Reference</button>
+</div>
+
+<div class="section">
+    <h2>Learning by Examples</h2>
+    <div class="code-box">
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;h1&gt;My First Heading&lt;/h1&gt;
+&lt;p&gt;My first paragraph.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+        <button>Try it Yourself</button>
+    </div>
+</div>
+
+<div class="exercise">
+    <h3>Exercise</h3>
+    <p>What is the correct HTML element for the largest heading?</p>
+
+    <button>&lt;h1&gt;</button>
+    <button>&lt;h6&gt;</button>
+    <button>&lt;heading&gt;</button>
+
+    <br><br>
+    <button class="submit">Submit Answer</button>
+</div>
+
+<div class="quiz">
+    <h3>HTML Quiz Test</h3>
+    <button>Start Quiz</button>
+</div>
+
+<div class="progress">
+    <h3>Track Your Progress</h3>
+    <ul>
+        <li>✔ Complete lessons</li>
+        <li>✔ Practice examples</li>
+        <li>✔ Take quizzes</li>
+    </ul>
+</div>
+
+<div class="note">
+    <p>Note: This tutorial follows the latest HTML standards.</p>
+</div>
+
+<div class="references">
+    <h3>HTML References</h3>
+    <div class="ref-grid">
+        <div>HTML Elements</div>
+        <div>Browser Support</div>
+        <div>Attributes</div>
+        <div>Events</div>
+    </div>
+</div>
+
+<div class="certificate">
+    <h3>Kickstart your career</h3>
+    <p>Get certified by completing HTML course</p>
+    <button>Get Certified</button>
+</div>
+
+<div class="video">
+    <h3>Video: HTML for Beginners</h3>
+    <iframe width="100%" height="300"
+        src="https://www.youtube.com/embed/qz0aGYrrlhU"
+        frameborder="0" allowfullscreen>
+    </iframe>
+</div>
+
+{% endblock %}

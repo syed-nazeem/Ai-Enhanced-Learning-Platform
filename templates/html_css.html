@@ -1,0 +1,266 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>HTML Styles - CSS</h1>
+
+<div class="top-nav">
+    <a class="btn" href="/html-colors">❮ Previous</a>
+    <a class="btn right" href="/html-links">Next ❯</a>
+</div>
+
+<p class="desc">CSS stands for Cascading Style Sheets. CSS saves a lot of work and controls the layout of multiple web pages at once.</p>
+
+<hr>
+
+<h2>What is CSS?</h2>
+
+<ul>
+    <li>✔ CSS stands for Cascading Style Sheets</li>
+    <li>✔ CSS describes how HTML elements are displayed</li>
+    <li>✔ CSS saves a lot of work</li>
+    <li>✔ CSS controls layout of multiple web pages</li>
+</ul>
+
+<div class="note">
+<p><b>Tip:</b> CSS can be added to HTML in 3 ways: Inline, Internal, External.</p>
+</div>
+
+<hr>
+
+<h2>Using CSS</h2>
+
+<p>CSS can be added to HTML documents in three ways:</p>
+
+<ul>
+    <li>Inline - using the style attribute</li>
+    <li>Internal - using a &lt;style&gt; element</li>
+    <li>External - using a CSS file</li>
+</ul>
+
+<hr>
+
+<h2>Inline CSS</h2>
+
+<p>Inline CSS is used to apply a unique style to a single element.</p>
+
+<div class="code-box">
+<pre>
+&lt;h1 style="color:blue;"&gt;A Blue Heading&lt;/h1&gt;
+&lt;p style="color:red;"&gt;A red paragraph.&lt;/p&gt;
+</pre>
+<button>Try it Yourself »</button>
+</div>
+
+<hr>
+
+<h2>Internal CSS</h2>
+
+<p>Internal CSS is defined inside a &lt;style&gt; element in the &lt;head&gt; section.</p>
+
+<div class="code-box">
+<pre>
+&lt;head&gt;
+&lt;style&gt;
+body {
+  background-color: lightblue;
+}
+h1 {
+  color: white;
+}
+p {
+  color: black;
+}
+&lt;/style&gt;
+&lt;/head&gt;
+</pre>
+<button>Try it Yourself »</button>
+</div>
+
+<hr>
+
+<h2>External CSS</h2>
+
+<p>External CSS is used to define the style for many pages.</p>
+
+<div class="code-box">
+<pre>
+&lt;head&gt;
+&lt;link rel="stylesheet" href="styles.css"&gt;
+&lt;/head&gt;
+</pre>
+<button>Try it Yourself »</button>
+</div>
+
+<p>Example of styles.css file:</p>
+
+<div class="code-box">
+<pre>
+body {
+  background-color: lightblue;
+}
+h1 {
+  color: navy;
+}
+p {
+  color: gray;
+}
+</pre>
+</div>
+
+<div class="note">
+<p><b>Best Practice:</b> Always use external CSS for large projects.</p>
+</div>
+
+<hr>
+
+<h2>CSS Colors, Fonts and Sizes</h2>
+
+<div class="code-box">
+<pre>
+body {
+  background-color: lightblue;
+}
+
+h1 {
+  color: white;
+  font-family: verdana;
+  font-size: 300%;
+}
+
+p {
+  color: black;
+  font-family: courier;
+  font-size: 160%;
+}
+</pre>
+<button>Try it Yourself »</button>
+</div>
+
+<hr>
+
+<h2>CSS Border</h2>
+
+<div class="code-box">
+<pre>
+p {
+  border: 2px solid powderblue;
+}
+</pre>
+<button>Try it Yourself »</button>
+</div>
+
+<hr>
+
+<h2>CSS Padding</h2>
+
+<div class="code-box">
+<pre>
+p {
+  padding: 20px;
+}
+</pre>
+<button>Try it Yourself »</button>
+</div>
+
+<hr>
+
+<h2>CSS Margin</h2>
+
+<div class="code-box">
+<pre>
+p {
+  margin: 20px;
+}
+</pre>
+<button>Try it Yourself »</button>
+</div>
+
+<hr>
+
+<h2>Link to External CSS</h2>
+
+<p>Use the &lt;link&gt; tag inside the &lt;head&gt; section:</p>
+
+<div class="code-box">
+<pre>
+&lt;link rel="stylesheet" href="styles.css"&gt;
+</pre>
+<button>Try it Yourself »</button>
+</div>
+
+<p>You can also link using full URL:</p>
+
+<div class="code-box">
+<pre>
+&lt;link rel="stylesheet" href="https://example.com/styles.css"&gt;
+</pre>
+<button>Try it Yourself »</button>
+</div>
+
+<hr>
+
+<h2>Extra Tips</h2>
+
+<ul>
+    <li>✔ Use external CSS for scalability</li>
+    <li>✔ Keep styles separate from HTML</li>
+    <li>✔ Use classes instead of inline styles</li>
+    <li>✔ Maintain consistent design</li>
+</ul>
+
+<hr>
+
+<h2>Chapter Summary</h2>
+
+<ul>
+    <li>✔ CSS styles HTML elements</li>
+    <li>✔ Inline CSS is for single elements</li>
+    <li>✔ Internal CSS is for one page</li>
+    <li>✔ External CSS is for multiple pages</li>
+</ul>
+
+<hr>
+
+<h2>Exercise</h2>
+
+<div class="exercise">
+<p>Which CSS method is best for large websites?</p>
+
+<button>Inline CSS</button>
+<button>Internal CSS</button>
+<button>External CSS</button>
+
+<br><br>
+<button class="submit">Submit Answer</button>
+</div>
+
+<hr>
+
+<h2>HTML Style Tags</h2>
+
+<table class="table">
+<tr>
+    <th>Tag</th>
+    <th>Description</th>
+</tr>
+<tr><td>&lt;style&gt;</td><td>Defines internal CSS</td></tr>
+<tr><td>&lt;link&gt;</td><td>Links external CSS file</td></tr>
+</table>
+
+<hr>
+
+<div class="video">
+    <h3>Video: HTML CSS</h3>
+    <iframe width="100%" height="300"
+        src="https://www.youtube.com/embed/qz0aGYrrlhU"
+        frameborder="0" allowfullscreen>
+    </iframe>
+</div>
+
+<div class="top-nav">
+    <a class="btn" href="/html-colors">❮ Previous</a>
+    <a class="btn right" href="/html-links">Next ❯</a>
+</div>
+
+{% endblock %}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login - AI Learn</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body class="login-new-body">
+
+<div class="login-container">
+
+    <!-- LEFT SIDE IMAGE -->
+    <div class="login-left">
+        <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0" alt="student">
+    </div>
+
+    <!-- RIGHT SIDE FORM -->
+    <div class="login-right">
+
+        <h2 class="brand">AI Learn</h2>
+
+        <h1>Login</h1>
+        <p>Enter your credentials to login to your account</p>
+
+        <!-- ✅ FORM ADDED -->
+        <form method="POST" action="/login">
+
+            <!-- ✅ name added -->
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+
+            <div class="login-options">
+                <label><input type="checkbox"> Remember me</label>
+                <span class="forgot">Forgot Password?</span>
+            </div>
+
+            <!-- ✅ removed onclick -->
+            <button type="submit">Sign In</button>
+
+        </form>
+
+        <div class="divider">OR</div>
+
+        <button class="google-btn">Sign in with Google</button>
+
+        <p class="signup">Don’t have an account? <span>Sign Up</span></p>
+
+    </div>
+
+</div>
+
+</body>
+</html>

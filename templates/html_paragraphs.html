@@ -1,0 +1,190 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>HTML Paragraphs</h1>
+
+<div class="top-nav">
+    <a class="btn" href="/html-headings">❮ Previous</a>
+    <a class="btn right" href="/html-styles">Next ❯</a>
+</div>
+
+<p class="desc">HTML paragraphs are used to display blocks of text.</p>
+
+<hr>
+
+<h2>HTML Paragraphs</h2>
+
+<p>The HTML &lt;p&gt; element defines a paragraph.</p>
+<p>A paragraph always starts on a new line and browsers automatically add space before and after it.</p>
+
+<div class="code-box">
+<pre>
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;p&gt;This is another paragraph.&lt;/p&gt;
+</pre>
+<button>Try it Yourself »</button>
+</div>
+
+<hr>
+
+<h2>HTML Display</h2>
+
+<p>You cannot be sure how HTML will be displayed.</p>
+<p>Large or small screens, and resized windows will create different results.</p>
+
+<p>HTML ignores extra spaces and new lines:</p>
+
+<div class="code-box">
+<pre>
+&lt;p&gt;
+This paragraph
+contains a lot of lines
+in the source code,
+but the browser
+ignores it.
+&lt;/p&gt;
+</pre>
+<button>Try it Yourself »</button>
+</div>
+
+<hr>
+
+<h2>HTML Horizontal Rules</h2>
+
+<p>The &lt;hr&gt; tag defines a thematic break in an HTML page.</p>
+
+<div class="code-box">
+<pre>
+&lt;h1&gt;Heading&lt;/h1&gt;
+&lt;p&gt;Some text.&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h2&gt;Another heading&lt;/h2&gt;
+&lt;p&gt;More text.&lt;/p&gt;
+</pre>
+<button>Try it Yourself »</button>
+</div>
+
+<hr>
+
+<h2>HTML Line Breaks</h2>
+
+<p>The &lt;br&gt; tag inserts a single line break.</p>
+
+<div class="code-box">
+<pre>
+&lt;p&gt;This is&lt;br&gt;a paragraph&lt;br&gt;with line breaks.&lt;/p&gt;
+</pre>
+<button>Try it Yourself »</button>
+</div>
+
+<hr>
+
+<h2>The Poem Problem</h2>
+
+<p>This poem will display on a single line:</p>
+
+<div class="code-box">
+<pre>
+&lt;p&gt;
+My Bonnie lies over the ocean.
+My Bonnie lies over the sea.
+My Bonnie lies over the ocean.
+Oh, bring back my Bonnie to me.
+&lt;/p&gt;
+</pre>
+<button>Try it Yourself »</button>
+</div>
+
+<hr>
+
+<h2>Solution - The HTML &lt;pre&gt; Element</h2>
+
+<p>The &lt;pre&gt; element preserves both spaces and line breaks:</p>
+
+<div class="code-box">
+<pre>
+&lt;pre&gt;
+My Bonnie lies over the ocean.
+My Bonnie lies over the sea.
+My Bonnie lies over the ocean.
+Oh, bring back my Bonnie to me.
+&lt;/pre&gt;
+</pre>
+<button>Try it Yourself »</button>
+</div>
+
+<div class="note">
+<p><b>Note:</b> The &lt;pre&gt; element displays text exactly as written in the HTML code.</p>
+</div>
+
+<hr>
+
+<h2>Extra Tips (Important)</h2>
+
+<ul>
+    <li>✔ Always use &lt;p&gt; for paragraphs</li>
+    <li>✔ Avoid using &lt;br&gt; for layout spacing</li>
+    <li>✔ Use CSS for styling instead of HTML spacing</li>
+</ul>
+
+<hr>
+
+<h2>Exercise</h2>
+
+<div class="exercise">
+<p>Which HTML tag defines a paragraph?</p>
+
+<button>&lt;para&gt;</button>
+<button>&lt;p&gt;</button>
+<button>&lt;text&gt;</button>
+
+<br><br>
+<button class="submit">Submit Answer</button>
+</div>
+
+<hr>
+
+<h2>HTML Tag Reference</h2>
+
+<table class="table">
+<tr>
+    <th>Tag</th>
+    <th>Description</th>
+</tr>
+<tr>
+    <td>&lt;p&gt;</td>
+    <td>Defines a paragraph</td>
+</tr>
+<tr>
+    <td>&lt;br&gt;</td>
+    <td>Inserts a line break</td>
+</tr>
+<tr>
+    <td>&lt;hr&gt;</td>
+    <td>Defines a horizontal rule</td>
+</tr>
+<tr>
+    <td>&lt;pre&gt;</td>
+    <td>Displays preformatted text</td>
+</tr>
+</table>
+
+<hr>
+
+<div class="video">
+    <h3>Video: HTML Paragraphs</h3>
+    <iframe width="100%" height="300"
+        src="https://www.youtube.com/embed/qz0aGYrrlhU"
+        frameborder="0" allowfullscreen>
+    </iframe>
+</div>
+
+<div class="top-nav">
+    <a class="btn" href="/html-headings">❮ Previous</a>
+    <a class="btn right" href="/html-styles">Next ❯</a>
+</div>
+
+{% endblock %}

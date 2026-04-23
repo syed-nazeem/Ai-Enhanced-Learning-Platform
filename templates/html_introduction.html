@@ -1,0 +1,159 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>HTML Introduction</h1>
+
+<div class="top-nav">
+    <a class="btn" href="/html-home">❮ Previous</a>
+    <a class="btn right" href="/html-editors">Next ❯</a>
+</div>
+
+<p>HTML is the standard markup language for creating Web pages.</p>
+
+<hr>
+
+<h2>What is HTML?</h2>
+<ul>
+    <li>HTML stands for Hyper Text Markup Language</li>
+    <li>HTML is the standard markup language for creating Web pages</li>
+    <li>HTML describes the structure of a Web page</li>
+    <li>HTML consists of a series of elements</li>
+    <li>HTML elements tell the browser how to display the content</li>
+</ul>
+
+<hr>
+
+<h2>A Simple HTML Document</h2>
+
+<div class="code-box">
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Page Title&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;h1&gt;My First Heading&lt;/h1&gt;
+&lt;p&gt;My first paragraph.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<button>Try it Yourself »</button>
+</div>
+
+---
+
+<h3>Example Explained</h3>
+
+<ul>
+    <li>&lt;!DOCTYPE html&gt; defines that this document is HTML5</li>
+    <li>&lt;html&gt; is the root element</li>
+    <li>&lt;head&gt; contains meta information</li>
+    <li>&lt;title&gt; specifies a title</li>
+    <li>&lt;body&gt; defines the visible content</li>
+</ul>
+
+<hr>
+
+<h2>What is an HTML Element?</h2>
+
+<p>An HTML element is defined by a start tag, some content, and an end tag:</p>
+
+<div class="code-box">
+<pre>
+&lt;tagname&gt;Content goes here...&lt;/tagname&gt;
+</pre>
+</div>
+
+<table class="table">
+<tr><th>Start tag</th><th>Element content</th><th>End tag</th></tr>
+<tr><td>&lt;h1&gt;</td><td>My First Heading</td><td>&lt;/h1&gt;</td></tr>
+<tr><td>&lt;p&gt;</td><td>My first paragraph.</td><td>&lt;/p&gt;</td></tr>
+</table>
+
+<div class="note">
+<p><b>Note:</b> Some HTML elements have no content.</p>
+</div>
+
+<hr>
+
+<h2>Web Browsers</h2>
+
+<p>The purpose of a web browser is to read HTML documents and display them correctly.</p>
+
+<div class="code-box">
+<pre>
+My First Heading
+
+My first paragraph.
+</pre>
+</div>
+
+<hr>
+
+<h2>HTML Page Structure</h2>
+
+<div class="code-box">
+<pre>
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Page title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;This is a heading&lt;/h1&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+</div>
+
+<div class="note">
+<p>The content inside the body section is displayed in the browser.</p>
+</div>
+
+<hr>
+
+<h2>HTML History</h2>
+
+<table class="table">
+<tr><th>Year</th><th>Version</th></tr>
+<tr><td>1989</td><td>Tim Berners-Lee invented WWW</td></tr>
+<tr><td>1991</td><td>HTML first version</td></tr>
+<tr><td>1995</td><td>HTML 2.0</td></tr>
+<tr><td>1997</td><td>HTML 4</td></tr>
+<tr><td>2014</td><td>HTML5</td></tr>
+</table>
+
+<div class="exercise">
+    <h3>Exercise</h3>
+    <p>What does HTML stand for?</p>
+
+    <button>Hyper Text Markup Language</button>
+    <button>Home Tool Markup Language</button>
+    <button>Hyperlinks Text Language</button>
+
+    <br><br>
+    <button class="submit">Submit Answer</button>
+</div>
+
+<div class="video">
+    <h3>Video: HTML Introduction</h3>
+    <iframe width="100%" height="300"
+        src="https://www.youtube.com/embed/qz0aGYrrlhU"
+        frameborder="0" allowfullscreen>
+    </iframe>
+</div>
+
+<div class="top-nav">
+    <a class="btn" href="/html-home">❮ Previous</a>
+    <a class="btn right" href="/html-editors">Next ❯</a>
+</div>
+
+{% endblock %}

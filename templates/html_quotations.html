@@ -1,0 +1,173 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>HTML Quotation and Citation Elements</h1>
+
+<div class="top-nav">
+    <a class="btn" href="/html-formatting">❮ Previous</a>
+    <a class="btn right" href="/html-comments">Next ❯</a>
+</div>
+
+<p class="desc">In this chapter we will go through the HTML quotation and citation elements.</p>
+
+<hr>
+
+<h2>Example</h2>
+
+<div class="code-box">
+<pre>
+&lt;p&gt;Here is a quote from WWF's website:&lt;/p&gt;
+
+&lt;blockquote cite="http://www.worldwildlife.org"&gt;
+For 50 years, WWF has been protecting the future of nature.
+&lt;/blockquote&gt;
+</pre>
+<button>Try it Yourself »</button>
+</div>
+
+<hr>
+
+<h2>HTML &lt;blockquote&gt; for Quotations</h2>
+
+<p>The &lt;blockquote&gt; element defines a section that is quoted from another source.</p>
+
+<div class="code-box">
+<pre>
+&lt;blockquote cite="https://example.com"&gt;
+This is a long quotation taken from another source.
+&lt;/blockquote&gt;
+</pre>
+<button>Try it Yourself »</button>
+</div>
+
+<hr>
+
+<h2>HTML &lt;q&gt; for Short Quotations</h2>
+
+<p>The &lt;q&gt; tag defines a short quotation.</p>
+
+<div class="code-box">
+<pre>
+&lt;p&gt;WWF's goal is to: 
+&lt;q&gt;Build a future where people live in harmony with nature&lt;/q&gt;
+&lt;/p&gt;
+</pre>
+<button>Try it Yourself »</button>
+</div>
+
+<hr>
+
+<h2>HTML &lt;abbr&gt; for Abbreviations</h2>
+
+<p>The &lt;abbr&gt; tag defines an abbreviation or acronym.</p>
+
+<div class="code-box">
+<pre>
+&lt;p&gt;The &lt;abbr title="World Health Organization"&gt;WHO&lt;/abbr&gt; was founded in 1948.&lt;/p&gt;
+</pre>
+<button>Try it Yourself »</button>
+</div>
+
+<hr>
+
+<h2>HTML &lt;address&gt; for Contact Information</h2>
+
+<p>The &lt;address&gt; tag defines contact information for the author.</p>
+
+<div class="code-box">
+<pre>
+&lt;address&gt;
+Written by John Doe.&lt;br&gt;
+Visit us at example.com&lt;br&gt;
+Email: test@example.com
+&lt;/address&gt;
+</pre>
+<button>Try it Yourself »</button>
+</div>
+
+<hr>
+
+<h2>HTML &lt;cite&gt; for Work Title</h2>
+
+<p>The &lt;cite&gt; tag defines the title of a creative work.</p>
+
+<div class="code-box">
+<pre>
+&lt;p&gt;&lt;cite&gt;The Scream&lt;/cite&gt; by Edvard Munch&lt;/p&gt;
+</pre>
+<button>Try it Yourself »</button>
+</div>
+
+<hr>
+
+<h2>HTML &lt;bdo&gt; for Bi-Directional Override</h2>
+
+<p>The &lt;bdo&gt; tag is used to override the current text direction.</p>
+
+<div class="code-box">
+<pre>
+&lt;bdo dir="rtl"&gt;This text will be written from right to left&lt;/bdo&gt;
+</pre>
+<button>Try it Yourself »</button>
+</div>
+
+<hr>
+
+<h2>Extra Tips</h2>
+
+<ul>
+    <li>✔ Use &lt;blockquote&gt; for long quotes</li>
+    <li>✔ Use &lt;q&gt; for short inline quotes</li>
+    <li>✔ Use &lt;abbr&gt; to show full forms on hover</li>
+    <li>✔ Use &lt;cite&gt; for titles of books, movies, etc.</li>
+</ul>
+
+<hr>
+
+<h2>Exercise</h2>
+
+<div class="exercise">
+<p>Which HTML element is used for short quotations?</p>
+
+<button>&lt;blockquote&gt;</button>
+<button>&lt;q&gt;</button>
+<button>&lt;cite&gt;</button>
+
+<br><br>
+<button class="submit">Submit Answer</button>
+</div>
+
+<hr>
+
+<h2>HTML Quotation and Citation Elements</h2>
+
+<table class="table">
+<tr>
+    <th>Tag</th>
+    <th>Description</th>
+</tr>
+<tr><td>&lt;abbr&gt;</td><td>Defines an abbreviation</td></tr>
+<tr><td>&lt;address&gt;</td><td>Defines contact information</td></tr>
+<tr><td>&lt;bdo&gt;</td><td>Overrides text direction</td></tr>
+<tr><td>&lt;blockquote&gt;</td><td>Defines a long quotation</td></tr>
+<tr><td>&lt;q&gt;</td><td>Defines a short quotation</td></tr>
+<tr><td>&lt;cite&gt;</td><td>Defines title of work</td></tr>
+</table>
+
+<hr>
+
+<div class="video">
+    <h3>Video: HTML Quotations</h3>
+    <iframe width="100%" height="300"
+        src="https://www.youtube.com/embed/qz0aGYrrlhU"
+        frameborder="0" allowfullscreen>
+    </iframe>
+</div>
+
+<div class="top-nav">
+    <a class="btn" href="/html-formatting">❮ Previous</a>
+    <a class="btn right" href="/html-comments">Next ❯</a>
+</div>
+
+{% endblock %}

@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>HTML Editors</h1>
+
+<div class="top-nav">
+    <a class="btn" href="/html-introduction">❮ Previous</a>
+    <a class="btn right" href="/html-basic">Next ❯</a>
+</div>
+
+<p>A simple text editor is all you need to learn HTML.</p>
+
+<hr>
+
+<h2>Learn HTML Using Notepad or TextEdit</h2>
+
+<p>Web pages can be created and modified by using professional HTML editors.</p>
+
+<p>However, for learning HTML we recommend a simple text editor like Notepad (PC) or TextEdit (Mac).</p>
+
+<hr>
+
+<h3>Step 1: Open Notepad (PC)</h3>
+<p><b>Windows 8 or later:</b><br>Open the Start Screen (the window symbol at the bottom left on your screen). Type Notepad.</p>
+
+<p><b>Windows 7 or earlier:</b><br>Open Start → Programs → Accessories → Notepad</p>
+
+<hr>
+
+<h3>Step 1: Open TextEdit (Mac)</h3>
+<p>Open Finder → Applications → TextEdit</p>
+
+<p>Also change some preferences to get the application to save files correctly:</p>
+
+<ul>
+    <li>In Preferences → Format → choose "Plain Text"</li>
+    <li>Under "Open and Save", check "Ignore rich text commands in HTML files"</li>
+</ul>
+
+<hr>
+
+<h3>Step 2: Write Some HTML</h3>
+
+<div class="code-box">
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;h1&gt;My First Heading&lt;/h1&gt;
+&lt;p&gt;My first paragraph.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+</div>
+
+<img src="https://www.w3schools.com/html/img_notepad.png" class="img">
+
+<hr>
+
+<h3>Step 3: Save the HTML Page</h3>
+
+<p>Save the file on your computer. Select File → Save as in the Notepad menu.</p>
+
+<div class="note">
+<p><b>Tip:</b> Save your file with a <b>.html</b> extension.</p>
+</div>
+
+<img src="https://www.w3schools.com/html/img_saveas.png" class="img">
+
+<hr>
+
+<h3>Step 4: View the HTML Page in Your Browser</h3>
+
+<p>Open the saved HTML file in your favorite browser (double click the file).</p>
+
+<img src="https://www.w3schools.com/html/img_chrome.png" class="img">
+
+<hr>
+
+<h2>W3Schools Online Editor - "Try it Yourself"</h2>
+
+<p>You can edit HTML code and view the result instantly in your browser.</p>
+
+<div class="code-box">
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;h1&gt;This is a Heading&lt;/h1&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+<button>Try it Yourself »</button>
+</div>
+
+<hr>
+
+<h2>W3Schools Spaces</h2>
+
+<div class="card">
+    <h3>Everything you need right in the browser</h3>
+    <p>Build, run and deploy your code easily.</p>
+    <button>Get Started Now</button>
+</div>
+
+<hr>
+
+<div class="video">
+    <h3>Video: HTML Editors</h3>
+    <iframe width="100%" height="300"
+        src="https://www.youtube.com/embed/qz0aGYrrlhU"
+        frameborder="0" allowfullscreen>
+    </iframe>
+</div>
+
+<div class="top-nav">
+    <a class="btn" href="/html-introduction">❮ Previous</a>
+    <a class="btn right" href="/html-basic">Next ❯</a>
+</div>
+
+{% endblock %}

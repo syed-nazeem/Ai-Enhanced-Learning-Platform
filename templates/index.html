@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Enhanced Learning Platform</title>
+    <!-- ✅ FIXED -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<nav class="topbar">
+    <div class="logo">AI Learn</div>
+
+    <div class="menu">
+        <a href="#">HTML</a>
+        <a href="#">CSS</a>
+        <a href="#">JAVASCRIPT</a>
+        <a href="#">SQL</a>
+        <a href="#">PYTHON</a>
+        <a href="#">JAVA</a>
+        <a href="#">DJANGO</a>
+    </div>
+
+    <!-- ✅ FIXED -->
+    <a href="/login" class="login-btn">Login</a>
+</nav>
+
+<section class="hero-main">
+    <h1>Learn to Code</h1>
+    <p>With the world’s most intelligent AI learning platform.</p>
+
+    <div class="search-box">
+        <input type="text" placeholder="Search our tutorials, e.g. HTML">
+        <button>🔍</button>
+    </div>
+
+    <p class="help-link">Not Sure Where To Begin?</p>
+</section>
+
+<!-- ================= HTML SECTION ================= -->
+<section class="course html">
+    <div class="course-left">
+        <h1>HTML</h1>
+        <p>The language for building web pages</p>
+
+        <button class="green" onclick="openHTMLTutorial()">Learn HTML</button>
+        <button class="green" onclick="openEditor()">Try it Yourself</button>
+        <button class="yellow">Video Tutorial</button>
+        <button class="black">HTML Reference</button>
+        <button class="pink">Get Certified</button>
+    </div>
+
+    <div class="course-right">
+        <h3>HTML Example:</h3>
+        <div class="code-box">
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;HTML Tutorial&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;This is a heading&lt;/h1&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+        </div>
+        <button class="green" onclick="openEditor()">Try it Yourself</button>
+    </div>
+</section>
+
+<!-- ================= CSS SECTION ================= -->
+<section class="course css">
+    <div class="course-left">
+        <h1>CSS</h1>
+        <p>The language for styling web pages</p>
+
+        <button class="green">Learn CSS</button>
+        <button class="black">CSS Reference</button>
+        <button class="pink">Get Certified</button>
+    </div>
+
+    <div class="course-right">
+        <h3>CSS Example:</h3>
+        <div class="code-box">
+<pre>
+body {
+    background-color: lightblue;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+p {
+    font-family: verdana;
+}
+</pre>
+        </div>
+        <button class="green" onclick="openEditor()">Try it Yourself</button>
+    </div>
+</section>
+
+<!-- ================= JS SECTION ================= -->
+<section class="course js">
+    <div class="course-left">
+        <h1>JavaScript</h1>
+        <p>The language for programming web pages</p>
+
+        <button class="green">Learn JS</button>
+        <button class="black">JS Reference</button>
+        <button class="pink">Get Certified</button>
+    </div>
+
+    <div class="course-right">
+        <h3>JavaScript Example:</h3>
+        <div class="code-box">
+<pre>
+function myFunction() {
+    document.getElementById("demo").innerHTML = "Hello JavaScript!";
+}
+</pre>
+        </div>
+        <button class="green" onclick="openEditor()">Try it Yourself</button>
+    </div>
+</section>
+
+<script>
+function openHTMLTutorial() {
+    window.location.href = "/html";
+}
+
+function openEditor() {
+    window.location.href = "/editor";
+}
+</script>
+
+</body>
+</html>

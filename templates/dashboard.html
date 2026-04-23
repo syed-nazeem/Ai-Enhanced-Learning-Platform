@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Enhanced Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- Charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+
+<body class="premium-body">
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+    <h2>AI Learn</h2>
+    <ul>
+        <li class="active">Overview</li>
+        <li>Courses</li>
+        <li>Assignments</li>
+        <li>Messages</li>
+        <li onclick="logout()">Logout</li>
+    </ul>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+    <!-- TOP BAR -->
+    <div class="topbar-premium">
+        <div>
+            <h3 id="greeting">Good Morning</h3>
+            <h1>Student 👋</h1>
+        </div>
+
+        <div class="top-right">
+            <input type="text" placeholder="Search...">
+            <span id="time"></span>
+        </div>
+    </div>
+
+    <!-- CONTENT GRID -->
+    <div class="grid">
+
+        <!-- LEFT -->
+        <div class="left">
+
+            <!-- STATS -->
+            <div class="stats">
+                <div class="stat pink">
+                    <h2>40</h2>
+                    <p>Total Courses</p>
+                </div>
+                <div class="stat orange">
+                    <h2>24</h2>
+                    <p>Assignments</p>
+                </div>
+                <div class="stat green">
+                    <h2>8</h2>
+                    <p>Quizzes</p>
+                </div>
+            </div>
+
+            <!-- CHART -->
+            <div class="chart-box">
+                <h3>Time Spends</h3>
+                <canvas id="myChart"></canvas>
+            </div>
+
+            <!-- COURSES -->
+            <h3>Active Courses</h3>
+            <div class="courses">
+                <div class="course-card">
+                    <h4>UI Design</h4>
+                    <p>19 Lessons</p>
+                </div>
+                <div class="course-card">
+                    <h4>Web Dev</h4>
+                    <p>25 Lessons</p>
+                </div>
+            </div>
+
+            <!-- CHAT -->
+            <div class="chat-box" id="chatBox"></div>
+
+            <div class="chat-input-area">
+                <input type="text" id="chatInput" placeholder="Ask AI...">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+
+        </div>
+
+        <!-- RIGHT PANEL -->
+        <div class="right">
+
+            <div class="profile-card">
+                <h3>Student</h3>
+                <p>AI & DS</p>
+            </div>
+
+            <div class="upcoming">
+                <h3>Upcoming</h3>
+                <p>HTML Assignment</p>
+                <p>CSS Project</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+<script>
+const ctx = document.getElementById('myChart');
+
+new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Mon','Tue','Wed','Thu','Fri'],
+        datasets: [{
+            data: [2,4,3,5,2],
+            backgroundColor: [
+                '#f97316','#3b82f6','#10b981','#a855f7','#22c55e'
+            ]
+        }]
+    },
+    options: {
+        plugins: { legend: { display: false } }
+    }
+});
+</script>
+
+</body>
+</html>

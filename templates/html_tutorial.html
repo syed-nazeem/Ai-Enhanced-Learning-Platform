@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Tutorial</title>
+    <!-- ✅ FIXED CSS PATH -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body style="background:#f1f5f9;">
+
+<div style="display:flex;">
+
+    <!-- SIDEBAR -->
+    <div id="sidebar" style="width:250px; background:#e5e7eb; padding:20px; height:100vh; overflow:auto;">
+        <h3>HTML Tutorial</h3>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="content" style="flex:1; padding:40px;">
+
+        <!-- DEFAULT CONTENT -->
+        <h1>HTML Introduction</h1>
+        <p>HTML is the standard markup language for creating Web pages.</p>
+
+        <div style="background:white; padding:20px; border-radius:10px;">
+            <h3>Example</h3>
+
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;h1&gt;This is a Heading&lt;/h1&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+            <button onclick="openEditor()" style="background:#22c55e; color:white; padding:10px 20px; border:none;">
+                Try it Yourself »
+            </button>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+    // 🔥 FULL SIDEBAR LIST
+    const topics = [
+    "HTML HOME",
+    "HTML Introduction",
+    "HTML Editors",
+    "HTML Basic",
+    "HTML Elements",
+    "HTML Attributes",
+    "HTML Headings",
+    "HTML Paragraphs",
+    "HTML Styles",
+    "HTML Formatting",
+    "HTML Quotations",
+    "HTML Comments",
+    "HTML Colors",
+    "HTML CSS",
+    "HTML Links",
+    "HTML Images",
+    "HTML Favicon",
+    "HTML Page Title",
+    "HTML Tables",
+    "HTML Lists",
+    "HTML Block & Inline",
+    "HTML Div",
+    "HTML Classes",
+    "HTML Id",
+    "HTML Buttons",
+    "HTML Iframes",
+    "HTML JavaScript",
+    "HTML File Paths",
+    "HTML Head",
+    "HTML Layout",
+    "HTML Responsive",
+    "HTML Computercode",
+    "HTML Semantics",
+    "HTML Style Guide",
+    "HTML Entities",
+    "HTML Symbols",
+    "HTML Emojis",
+    "HTML Charsets",
+    "HTML URL Encode",
+    "HTML vs XHTML"
+    ];
+    
+    // 🔥 AUTO CREATE SIDEBAR
+    const sidebar = document.getElementById("sidebar");
+    
+    topics.forEach((topic) => {
+    
+        const item = document.createElement("p");
+        item.innerText = topic;
+    
+        item.style.cursor = "pointer";
+        item.style.padding = "6px 0";
+    
+        item.onclick = () => loadContent(topic);
+    
+        sidebar.appendChild(item);
+    });
+    
+    // 🔥 DYNAMIC CONTENT
+    function loadContent(topic) {
+        document.getElementById("content").innerHTML = `
+            <h1>${topic}</h1>
+            <p>This section explains ${topic} in detail.</p>
+    
+            <div style="background:white; padding:20px; border-radius:10px; margin-top:20px;">
+                <h3>Example</h3>
+<pre>
+&lt;h1&gt;${topic}&lt;/h1&gt;
+&lt;p&gt;Sample content for ${topic}&lt;/p&gt;
+</pre>
+    
+                <button onclick="openEditor()" style="background:#22c55e; color:white; padding:10px 20px; border:none;">
+                    Try it Yourself »
+                </button>
+            </div>
+        `;
+    }
+
+    // ✅ FIXED EDITOR FUNCTION (GLOBAL + NEW TAB)
+    window.openEditor = function() {
+        window.open("/editor", "_blank");
+    };
+
+</script>
+
+</body>
+</html>
