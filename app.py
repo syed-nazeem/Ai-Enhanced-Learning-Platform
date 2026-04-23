@@ -1,14 +1,13 @@
 from flask import Flask, request, jsonify, render_template, redirect
 from flask_cors import CORS
 import requests
+import os
 
 app = Flask(__name__)
 CORS(app)
 
-# 🔐 API KEY
-import os
-
-OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
+# 🔐 API KEY (SAFE WAY)
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY", "YOUR API KEY")
 
 
 # ---------- Serve Frontend ----------
@@ -43,7 +42,7 @@ def html_page():
     return render_template("html_home.html")
 
 
-# ---------- HTML SIDEBAR ROUTES (NEW ADDED) ----------
+# ---------- HTML SIDEBAR ROUTES ----------
 
 @app.route("/html-home")
 def html_home():
@@ -232,9 +231,6 @@ def chat():
             }
         )
 
-        print("STATUS:", response.status_code)
-        print("RAW RESPONSE:", response.text)
-
         result = response.json()
 
         if "choices" in result:
@@ -246,6 +242,13 @@ def chat():
         reply = "Error: " + str(e)
 
     return jsonify({"reply": reply})
+
+
+# ---------- HEALTH CHECK (IMPORTANT FOR RENDER) ----------
+
+@app.route("/healthz")
+def health():
+    return "OK", 200
 
 
 # ---------- RUN ----------
